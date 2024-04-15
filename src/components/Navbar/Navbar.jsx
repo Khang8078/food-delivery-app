@@ -3,8 +3,9 @@ import { useState } from 'react';
 import './Navbar.css'
 import {assets} from '../../assets/assets'
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types'; // Import PropTypes
 
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
 
   const [menu,setMenu] = useState("home");
   return (
@@ -22,10 +23,15 @@ const Navbar = () => {
             <img src={assets.basket_icon} alt="" />
             <div className="dot"></div>
           </div>
-          <button>Sign in</button>
+          <button onClick={()=>setShowLogin(true)}>Sign in</button>
         </div>
     </div>
   )
 }
 
 export default Navbar
+
+// Add prop types validation
+Navbar.propTypes = {
+  setShowLogin: PropTypes.func.isRequired, // Assuming setCategory is a function
+};
