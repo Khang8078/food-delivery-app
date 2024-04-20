@@ -35,5 +35,5 @@ export default Navbar
 
 // Add prop types validation
 Navbar.propTypes = {
-  setShowLogin: PropTypes.func.isRequired, // Assuming setCategory is a function
+  setShowLogin: PropTypes.any.isRequired, // Assuming setCategory is a function
 }

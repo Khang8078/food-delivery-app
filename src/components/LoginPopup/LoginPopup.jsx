@@ -37,5 +37,5 @@ export default LoginPopup
 
 // Add prop types validation
 LoginPopup.propTypes = {
-    setShowLogin: PropTypes.func.isRequired, // Assuming setCategory is a function
+    setShowLogin: PropTypes.any.isRequired, // Assuming setCategory is a function
   };
